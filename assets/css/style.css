@@ -1,28 +1,108 @@
-.bg{
+.bg {
     background-image: url("/Users/rogermcintosh/week-4-game/assets/images/star-wars-wp.png");
     background-repeat: no-repeat;
-
     background-position: center;
     background-size: cover;
 }
 
+body,
+html {
+    height: 100%;
+}
 
-    body, html {
-        height: 100%;
+.container {
+    position: relative;
+}
+
+.content {
+    overflow: hidden;
+    width: 30%;
+    float: left;
+}
+
+.sidebar {
+    width: 16%;
+    float: right;
+    margin-right: 162px;
+}
+
+.row {
+    width: 7%;
+    margin-right: auto;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 25px;
+}
+
+h2 {
+    width: 227px;
+    font-size: 30px;
+    text-align: center;
+    color: yellow;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+img {
+    box-shadow: 0px 0px 67px #fff;
+}
+
+#arena {
+    opacity: .5px;
+}
+
+#attack-button {
+    display: inline-block;
+    margin-top: 310px;
+    margin-left: 203px;
+    font-size: 30px;
+    background-color: red;
+    color: white;
+    position: relative;
+    -webkit-animation: pulsate 3s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    opacity: 0.5;
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        opacity: 0.5;
     }
-    
-.row{
-    width: 68%;
-    margin-right:auto;
-    margin-left: auto;
-    margin-bottom: -170px;
+    50% {
+        opacity: 1.0;
+    }
+    100% {
+        opacity: 0.5;
+    }
 }
 
-h2{
-    background-color: white;
-    opacity: .5%;
+h1 {
+    font-family: fantasy;
+    text-align: center;
+    color: yellow;
+    font-size: 65px;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-img{box-shadow: 0px 0px 67px #fff;
-
+h3 {
+    justify-content: center;
+    position: relative;
+    top: -2px;
+    top: 23px;
+    margin-bottom: 0;
+    margin-top: 0;
+    /* margin: 0; */
+    border: 0;
+    /* margin-top: auto; */
+    /* margin-left: 0; */
+    font-size: 60px;
+    /* background-color: red; */
+    color: #fb4545;
+    font-weight: bolder;
+    top: 282px;
+    left: 215px;
 }
+
+/* header animation */
+
