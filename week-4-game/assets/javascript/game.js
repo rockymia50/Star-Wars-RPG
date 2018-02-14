@@ -1,6 +1,17 @@
 // JavaScript function that wraps everything
 $(document).ready(function () {
 
+    // hook up restart button
+    $("#restart-button").click(function () {
+        location.reload();
+    });
+    startGame();
+});
+
+
+
+function startGame() {
+
     // Gets Link for Theme Song
     var audioElement = document.createElement("audio");
     audioElement.setAttribute("src", "assets/images/star_wars song.mp3");
@@ -20,22 +31,25 @@ $(document).ready(function () {
         health: 100,
         attack: 8,
         counter: 20,
-
+        healthId: "chew-health"
     }
 
     let darth = {
         health: 150,
-        counter: 20
+        counter: 20,
+        healthId: 'darth-health'
     }
 
     let storm = {
         health: 180,
-        counter: 25
+        counter: 25,
+        healthId: 'storm-health'
     }
 
     let dark = {
         health: 100,
-        counter: 5
+        counter: 5,
+        healthId: 'dark-health'
     }
 
     // Move Clicks to arena
@@ -48,10 +62,10 @@ $(document).ready(function () {
 
         // hook up move image down action
         $("#moveOne img").click(function () {
-            if (counter = 0) {
+            if (counter == 0) {
                 player1 = chew
                 counter++;
-            } else if (counter = 1) {
+            } else if (counter == 1) {
                 player2 = chew;
 
             }
@@ -80,7 +94,7 @@ $(document).ready(function () {
         });
 
         $("#moveFour img").click(function () {
-            player1 = dark;
+            player2 = dark;
 
             $("#moveFour").animate({
                 bottom: '200px'
@@ -88,8 +102,8 @@ $(document).ready(function () {
         });
 
 
-        var points = 8;
-        points = chew.attack * points
+
+
         // 1st onlick = player1 , 2nd click = player2
 
 
@@ -99,12 +113,12 @@ $(document).ready(function () {
         $("#attack-button").click(function () {
 
 
-            // if player1 or player 2 = chew , attack equals 8 to the power of.
+            // if player1 or player 2 = chew , attack points multiple.
 
             if (player1 == chew || player2 == chew) {
 
             } else if (player1 !== chew || player2 !== chew) {
-                chew.attack = 8 * points;
+                chew.attack = 8 + chew.attack;
                 console.log(chew.attack)
             }
 
@@ -119,10 +133,11 @@ $(document).ready(function () {
             player2.health = player2.health - player1.counter
             console.log(player1.health, player2.health);
 
-            document.getElementById("chew-health").innerText = player1.health;
-            document.getElementById("storm-health").innerText = player2.health;
-            document.getElementById("darth-health").innerText = player2.health;
-            document.getElementById("dark-health").innerText = player2.health;
+            document.getElementById(player1.healthId).innerText = player1.health;
+            document.getElementById(player2.healthId).innerText = player2.health;
+            //document.getElementById("storm-health").innerText = player2.health;
+            //document.getElementById("darth-health").innerText = player2.health;
+            //ocument.getElementById("dark-health").innerText = player2.health;
 
 
             if (player1.health <= 0 || player2.health <= 0) {
@@ -153,4 +168,5 @@ $(document).ready(function () {
 
     printToScreen();
 
-})
+
+}
