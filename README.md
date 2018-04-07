@@ -1,6 +1,6 @@
 # STAR WARS RPG
 
-Simple star wars themed combat game using our favorite friends ol' Javascript and Jqery. Select your team of star wars characters and battle it out against each other. 
+Simple star wars themed combat game using our favorite friends ol' Javascript and Jquery. Select your team of star wars characters and battle it out against each other. 
 
 ![alt text](https://github.com/rockymia50/Star-Wars-RPG/blob/master/assets/images/StarWars.png?raw=true "Star Wars RPG") 
 
