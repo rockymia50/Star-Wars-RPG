@@ -52,6 +52,7 @@ h2 {
     border-style: groove;
     border-width: 5px;
     min-width: 229px;
+    z-index: 100;
 }
 
 img {
@@ -63,6 +64,7 @@ img {
 #arena {
     opacity: .5px;
     width: 100px;
+    z-index: -1;
 }
 
 #attack-button {
