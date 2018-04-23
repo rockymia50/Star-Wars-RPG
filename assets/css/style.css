@@ -1,5 +1,5 @@
 .bg {
-    background-image: url("/Users/rogermcintosh/week-4-game/assets/images/background.png");
+    background-image: url("../images/background.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
